@@ -1,15 +1,15 @@
 package ie.atu.week9;
 
 public class Customer extends Person{
-    private String custNumber;
+    private int custNumber;
     private boolean mailingList;
 
     public Customer() {
-        this.custNumber = null;
+        this.custNumber = 0;
         this.mailingList = false;
     }
 
-    public Customer(String name, String address, String phone, String custNumber, boolean mailingList) {
+    public Customer(String name, String address, String phone, int custNumber, boolean mailingList) {
         super(name, address, phone);
         this.custNumber = custNumber;
         this.mailingList = mailingList;
@@ -20,5 +20,13 @@ public class Customer extends Person{
         return super.toString() +
                 ", custNumber='" + custNumber + '\'' +
                 ", mailingList=" + mailingList ;
+    }
+
+    public void setCustNumber(int custNumber) {
+        this.custNumber = custNumber;
+    }
+
+    public void setMailingList(boolean mailingList) {
+        this.mailingList = mailingList;
     }
 }
